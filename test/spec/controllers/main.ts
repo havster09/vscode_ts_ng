@@ -20,7 +20,7 @@ describe('Controller: ProductListController', () => {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', () => {
+  // it('should attach a list of awesomeThings to the scope', () => {
     
-  });
+  // });
 });
