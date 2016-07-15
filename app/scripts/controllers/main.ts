@@ -1,4 +1,5 @@
 /// <reference path="../app.ts" />
+/// <reference path="../business-objects/product.ts" />
 
 'use strict';
 
@@ -6,14 +7,14 @@ module apmApp {
   export interface IProductListModel {
     title:string;
     showImage:boolean;
-    products:any;
+    products:apmApp.Product[];
     toggleImage():void;
   }
 
   export class ProductListController implements IProductListModel {
     title:string;
     showImage:boolean;
-    products:any;
+    products:any[];
     constructor () {
       this.title = 'Product List';
       this.products = [

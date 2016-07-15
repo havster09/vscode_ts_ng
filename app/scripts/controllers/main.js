@@ -1,4 +1,5 @@
 /// <reference path="../app.ts" />
+/// <reference path="..//business-objects/product.ts" />
 'use strict';
 var apmApp;
 (function (apmApp) {
@@ -39,7 +40,7 @@ var apmApp;
             this.showImage = !this.showImage;
         };
         return ProductListController;
-    }());
+    })();
     apmApp.ProductListController = ProductListController;
 })(apmApp || (apmApp = {}));
 angular.module('apmApp')
