@@ -1,4 +1,4 @@
-/// <reference path="../../../typings/angularjs/angular-resource.d.ts" />
+/// <reference path='../../../typings/angularjs/angular-resource.d.ts' />
 
 'use strict';
 
@@ -12,15 +12,16 @@ module apmApp {
     }
 
     export class DataAccessService implements IDataAccessService {
-        static $inject = ["$resource"];
+        static $inject = ['$resource'];
         constructor(private $resource: ng.resource.IResourceService) {
 
         }
         getProductResource():ng.resource.IResourceClass<IProductResource> {
-            return this.$resource("/api/products/:productId");
+            return this.$resource('/api/products/:productId');
         }
-    }
-    angular.module("apmApp")
-    .service("dataAccessService", DataAccessService);
-}
+    }    
+};
+
+angular.module('apmApp')
+    .service('dataAccessService', apmApp.DataAccessService);
 
