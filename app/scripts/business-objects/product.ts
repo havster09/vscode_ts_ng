@@ -19,7 +19,7 @@ module apmApp {
             public releaseDate:Date,
             public price:number,
             public description:string,
-            public imageUrl:string){
+            public imageUrl:string) {
 
             }
 

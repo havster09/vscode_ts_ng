@@ -1,3 +1,4 @@
+/// <reference path="../../../typings/angularjs/angular-resource.d.ts" />
 'use strict';
 var apmApp;
 (function (apmApp) {
@@ -10,7 +11,7 @@ var apmApp;
         };
         DataAccessService.$inject = ["$resource"];
         return DataAccessService;
-    })();
+    }());
     apmApp.DataAccessService = DataAccessService;
     angular.module("apmApp")
         .service("dataAccessService", DataAccessService);

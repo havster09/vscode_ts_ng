@@ -1,9 +1,9 @@
 /// <reference path="../../typings/angularjs/angular.d.ts" />
 /// <reference path="../../typings/angularjs/angular-route.d.ts" />
+(() => {
+  'use strict';
 
-'use strict';
-
-angular.module('apmApp', [
+  angular.module('apmApp', [
     'ngAnimate',
     'ngCookies',
     'ngMessages',
@@ -12,19 +12,21 @@ angular.module('apmApp', [
     'ngSanitize',
     'ngTouch'
   ])
-  .config(($routeProvider:ng.route.IRouteProvider) => {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'ProductListController',
-        controllerAs:'ctrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+    .config(($routeProvider: ng.route.IRouteProvider) => {
+      $routeProvider
+        .when('/', {
+          templateUrl: 'views/main.html',
+          controller: 'ProductListController',
+          controllerAs: 'ctrl'
+        })
+        .when('/about', {
+          templateUrl: 'views/about.html',
+          controller: 'AboutCtrl',
+          controllerAs: 'about'
+        })
+        .otherwise({
+          redirectTo: '/'
+        });
+    });
+
+})();
