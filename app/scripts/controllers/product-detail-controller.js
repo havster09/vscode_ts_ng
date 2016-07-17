@@ -1,4 +1,4 @@
-/// <reference path='../business-objects/product.ts' />
+/// <reference path='../models/product.ts' />
 /// <reference path='../app.ts' />
 'use strict';
 var apmApp;

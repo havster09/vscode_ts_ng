@@ -39,6 +39,7 @@
 
             <ul class="nav navbar-nav">
               <li class="active"><a href="#/">Home</a></li>
+              <li><a ng-href="#/bucks">Bucks</a></li>
               <li><a ng-href="#/about">About</a></li>
               <li><a ng-href="#/">Contact</a></li>
             </ul>
@@ -87,11 +88,14 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/common/routes.js"></script>
+        <script src="scripts/common/mocks.js"></script>
         <script src="scripts/controllers/product-list-controller.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/dataAccessService.js"></script>
-        <script src="scripts/business-objects/product.js"></script>
+        <script src="scripts/models/product.js"></script>
         <script src="scripts/controllers/product-detail-controller.js"></script>
+        <script src="scripts/controllers/bucks.js"></script>
         <!-- endbuild -->
 </body>
 </html>

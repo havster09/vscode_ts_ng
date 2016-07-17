@@ -1,5 +1,5 @@
 /// <reference path='../app.ts' />
-/// <reference path='../business-objects/product.ts' />
+/// <reference path='../models/product.ts' />
 /// <reference path='../services/dataAccessService.ts' />
 
 'use strict';

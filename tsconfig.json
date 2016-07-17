@@ -11,6 +11,6 @@
     "public",
     "typings/browser",
     "typings/browser.d.ts",
-    ".tmp"
+    ".tmp/scripts"
   ]
 }
