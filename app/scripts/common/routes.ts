@@ -1,6 +1,5 @@
 /// <reference path='../../../typings/angularjs/angular-route.d.ts' />
 /// <reference path='../app.ts' />
-
 'use strict';
 
 module apmApp {

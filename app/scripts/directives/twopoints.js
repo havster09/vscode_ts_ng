@@ -1,0 +1,34 @@
+/// <reference path="../app.ts" />
+'use strict';
+var apmApp;
+(function (apmApp) {
+    var TwoPointsCtrl = (function () {
+        function TwoPointsCtrl($log) {
+            this.$log = $log;
+        }
+        TwoPointsCtrl.prototype.scoreTwo = function () {
+            this.$log.log('two points');
+        };
+        TwoPointsCtrl.$inject = ['$log'];
+        return TwoPointsCtrl;
+    }());
+    function twoPointsFactory() {
+        return {
+            restrict: 'E',
+            template: '<button class="btn btn-primary" ng-click="ctrl.scoreTwo()">{{ctrl.text}}</button>',
+            scope: {
+                text: '@'
+            },
+            controller: TwoPointsCtrl,
+            controllerAs: 'ctrl',
+            bindToController: true,
+            link: function (scope, element, attrs, controller) {
+                console.log(controller.text);
+            }
+        };
+    }
+    apmApp.twoPointsFactory = twoPointsFactory;
+})(apmApp || (apmApp = {}));
+angular.module('apmApp')
+    .directive('twoPoints', apmApp.twoPointsFactory);
+//# sourceMappingURL=twopoints.js.map
