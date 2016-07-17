@@ -15,7 +15,7 @@ module apmApp {
   export class ProductListController implements IProductListModel {
     title: string;
     showImage: boolean;
-    products: any[];
+    products: apmApp.Product[];
 		static $inject = ['dataAccessService'];
     constructor(private dataAccessService: apmApp.DataAccessService) {
       this.title = 'Product List';

@@ -14,6 +14,7 @@ var apmApp;
     }());
     apmApp.DataAccessService = DataAccessService;
 })(apmApp || (apmApp = {}));
+;
 angular.module('apmApp')
     .service('dataAccessService', apmApp.DataAccessService);
 //# sourceMappingURL=dataAccessService.js.map

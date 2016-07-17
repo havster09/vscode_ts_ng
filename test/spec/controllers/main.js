@@ -1,6 +1,6 @@
 /// <reference path="../../../typings/angularjs/angular-mocks.d.ts" />
 /// <reference path="../../../typings/jasmine/jasmine.d.ts" />
-/// <reference path="../../../app/scripts/controllers/main.ts" />
+/// <reference path="../../../app/scripts/controllers/product-list-controller.ts" />
 'use strict';
 describe('Controller: ProductListController', function () {
     // load the controller's module

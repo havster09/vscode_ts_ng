@@ -12,7 +12,6 @@ var apmApp;
             this.products = [];
             var productResource = dataAccessService.getProductResource();
             productResource.query(function (data) {
-                console.log(data);
                 _this.products = data;
             });
         }
@@ -27,4 +26,4 @@ var apmApp;
 })(apmApp || (apmApp = {}));
 angular.module('apmApp')
     .controller('ProductListController', apmApp.ProductListController);
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=product-list-controller.js.map

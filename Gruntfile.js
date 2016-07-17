@@ -235,8 +235,7 @@ module.exports = function (grunt) {
                     module: 'amd', //or commonjs
                     target: 'es5', //or es3
                     'base_path': '<%= yeoman.app %>/scripts', //quoting base_path to get around jshint warning.
-                    sourceMap: true,
-                    declaration: true
+                    sourceMap: true
                 }
             },
             test: {
@@ -245,8 +244,7 @@ module.exports = function (grunt) {
                 options: {
                     module: 'amd', //or commonjs
                     target: 'es5', //or es3
-                    sourceMap: true,
-                    declaration: true
+                    sourceMap: true
                 }
             }
         },
