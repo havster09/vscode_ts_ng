@@ -3,13 +3,18 @@
 'use strict';
 
 module apmApp {
-  class TwoPointsCtrl {
-    text:string;
+  interface ITwoPoints {
+    text: string;
+    players: any[];
+  }
+  class TwoPointsCtrl implements ITwoPoints {
+    text: string;
+    players: any[];
     static $inject = ['$log'];
-    constructor(private $log:ng.ILogService) {
+    constructor(private $log: ng.ILogService) {
 
     }
-    scoreTwo():void {
+    scoreTwo(): void {
       this.$log.log('two points');
     }
   }
@@ -17,16 +22,21 @@ module apmApp {
   export function twoPointsFactory(): ng.IDirective {
     return {
       restrict: 'E',
-      template: '<button class="btn btn-primary" ng-click="ctrl.scoreTwo()">{{ctrl.text}}</button>',
+      template: `<button class="btn btn-primary" ng-click="ctrl.scoreTwo()">{{ctrl.text}}</button>
+      <button class="btn btn-primary" ng-click="ctrl.doEuro()">doEuro</button>
+      `,
       scope: {
-        text: '@'
+        text: '@',
+        players: '=players',
+        doEuro: '&doEuro'
       },
       controller: TwoPointsCtrl,
       controllerAs: 'ctrl',
       bindToController: true,
       link: (scope: ng.IScope, element: ng.IAugmentedJQuery, attrs: ng.IAttributes,
         controller: TwoPointsCtrl) => {
-          console.log(controller.text);
+        console.log(controller.text);
+        console.log(controller.players);        
       }
     };
   }

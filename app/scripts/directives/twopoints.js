@@ -11,19 +11,22 @@ var apmApp;
         };
         TwoPointsCtrl.$inject = ['$log'];
         return TwoPointsCtrl;
-    }());
+    })();
     function twoPointsFactory() {
         return {
             restrict: 'E',
-            template: '<button class="btn btn-primary" ng-click="ctrl.scoreTwo()">{{ctrl.text}}</button>',
+            template: "<button class=\"btn btn-primary\" ng-click=\"ctrl.scoreTwo()\">{{ctrl.text}}</button>\n      <button class=\"btn btn-primary\" ng-click=\"ctrl.doEuro()\">doEuro</button>\n      ",
             scope: {
-                text: '@'
+                text: '@',
+                players: '=players',
+                doEuro: '&doEuro'
             },
             controller: TwoPointsCtrl,
             controllerAs: 'ctrl',
             bindToController: true,
             link: function (scope, element, attrs, controller) {
                 console.log(controller.text);
+                console.log(controller.players);
             }
         };
     }

@@ -16,7 +16,7 @@ var apmApp;
         }
         ProductDetailController.$inject = ['$routeParams', 'dataAccessService'];
         return ProductDetailController;
-    }());
+    })();
     apmApp.ProductDetailController = ProductDetailController;
 })(apmApp || (apmApp = {}));
 angular.module('apmApp')

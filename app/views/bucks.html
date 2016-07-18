@@ -1,5 +1,8 @@
-<ul>
-    <li ng-repeat="player in ctrl.players">{{player}}</li>
+<ul ng-repeat="player in ctrl.players">
+    <li>{{player.firstName}}</li>
+    <li>{{player.lastName}}</li>
+    <li>{{player.team}}</li>
+    <li>{{player.position}}</li>
 </ul>
 
-<two-points text="two points"></two-points>
+<two-points text="two points" players="ctrl.players" do-euro="ctrl.doEuro()"></two-points>

@@ -15,7 +15,7 @@ var apmApp;
             return this.price - (this.price * percent / 100);
         };
         return Product;
-    }());
+    })();
     apmApp.Product = Product;
 })(apmApp || (apmApp = {}));
 //# sourceMappingURL=product.js.map
