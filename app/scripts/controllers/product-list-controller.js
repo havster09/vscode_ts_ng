@@ -21,7 +21,7 @@ var apmApp;
         };
         ProductListController.$inject = ['dataAccessService'];
         return ProductListController;
-    })();
+    }());
     apmApp.ProductListController = ProductListController;
 })(apmApp || (apmApp = {}));
 angular.module('apmApp')

@@ -16,7 +16,7 @@ var apmApp;
             console.log('work');
         };
         return RouteLoggerCtrl;
-    })();
+    }());
     var Routelogger = (function () {
         function Routelogger() {
             this.restrict = 'E';
@@ -26,7 +26,7 @@ var apmApp;
         }
         Routelogger.$inject = ['$scope, $log, $location'];
         return Routelogger;
-    })();
+    }());
     apmApp.Routelogger = Routelogger;
     function routeLoggerFactory() {
         return new apmApp.Routelogger();

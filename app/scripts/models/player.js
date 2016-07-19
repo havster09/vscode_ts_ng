@@ -11,7 +11,7 @@ var apmApp;
             this.position = position;
         }
         return Player;
-    })();
+    }());
     apmApp.Player = Player;
 })(apmApp || (apmApp = {}));
 //# sourceMappingURL=player.js.map

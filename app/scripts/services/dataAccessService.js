@@ -11,7 +11,7 @@ var apmApp;
         };
         DataAccessService.$inject = ['$resource'];
         return DataAccessService;
-    })();
+    }());
     apmApp.DataAccessService = DataAccessService;
 })(apmApp || (apmApp = {}));
 ;

@@ -12,7 +12,7 @@ var apmApp;
             ];
         }
         return AboutCtrl;
-    })();
+    }());
     apmApp.AboutCtrl = AboutCtrl;
 })(apmApp || (apmApp = {}));
 angular.module('apmApp')

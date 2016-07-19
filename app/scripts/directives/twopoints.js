@@ -11,7 +11,7 @@ var apmApp;
         };
         TwoPointsCtrl.$inject = ['$log'];
         return TwoPointsCtrl;
-    })();
+    }());
     function twoPointsFactory() {
         return {
             restrict: 'E',
