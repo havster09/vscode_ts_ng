@@ -8,21 +8,23 @@ module apmApp {
 
   }
 
-  export interface IGetPlayerConfig extends ng.IRequestConfig {
-    method:any;
-  }
-
   export interface IBucksService {
-    getPlayers(): ng.IHttpPromise<IGetPlayer>;
+    getPlayers(): ng.IPromise<IGetPlayer>;
   }
-  export class BucksService {
+  export class BucksService implements IBucksService {
     static $inject = ['$http', '$q'];
     constructor(private $http: ng.IHttpService, private $q: ng.IQService) {
 
     }
 
     getPlayers() {
-      // this.$http<IGetPlayerConfig>();
+      const deferred:ng.IDeferred<{}> = this.$q.defer();
+      this.$http.get('/api/players/bucks').success((data: ng.IHttpPromiseCallback<{}>) => {
+        deferred.resolve(data);
+      }).error((status: ng.IHttpPromiseCallback<{}>) => {
+        deferred.reject(status);
+      });
+      return deferred.promise;
     }
   }
 }

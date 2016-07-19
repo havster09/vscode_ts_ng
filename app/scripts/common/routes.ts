@@ -21,7 +21,10 @@ module apmApp {
             .when('/bucks', {
                 templateUrl: 'views/bucks.html',
                 controller: 'BucksCtrl',
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                resolve: {
+                    
+                }
             })
             .when('/about', {
                 templateUrl: 'views/about.html',

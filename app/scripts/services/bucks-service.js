@@ -9,7 +9,13 @@ var apmApp;
             this.$q = $q;
         }
         BucksService.prototype.getPlayers = function () {
-            // this.$http<IGetPlayerConfig>();
+            var deferred = this.$q.defer();
+            this.$http.get('/api/players/bucks').success(function (data) {
+                deferred.resolve(data);
+            }).error(function (status) {
+                deferred.reject(status);
+            });
+            return deferred.promise;
         };
         BucksService.$inject = ['$http', '$q'];
         return BucksService;

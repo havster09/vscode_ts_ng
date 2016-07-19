@@ -12,14 +12,24 @@ module apmApp {
 
   export class BucksCtrl implements IBucksModel {
     players: apmApp.Player[];
-    constructor () {
+    constructor(private bucksService: apmApp.IBucksService) {
       this.players = [];
-      var player:apmApp.Player = new apmApp.Player('giannis','antetakumpo',35,'bucks',apmApp.Position['2']);
+      var player: apmApp.Player = new apmApp.Player('giannis', 'antetakumpo', 35, 'bucks', apmApp.Position['2']);
       this.players.push(player);
     }
 
-    doEuro():void {
+    doEuro(): void {
       console.log('do some euro steps baby');
+    }
+
+    getPlayers(): any {
+      this.bucksService.getPlayers()
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((status) => {
+          console.log(status);
+        });
     }
   }
 }
