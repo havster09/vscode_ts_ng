@@ -19,7 +19,7 @@ module apmApp {
     }
 
     doEuro():void {
-      console.log('do some euro steps');
+      console.log('do some euro steps baby');
     }
   }
 }
