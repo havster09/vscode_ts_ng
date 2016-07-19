@@ -7,7 +7,7 @@ var apmApp;
             this.$log = $log;
         }
         TwoPointsCtrl.prototype.scoreTwo = function () {
-            this.$log.log('two points');
+            this.$log.log('bang two points');
         };
         TwoPointsCtrl.$inject = ['$log'];
         return TwoPointsCtrl;

@@ -15,7 +15,7 @@ module apmApp {
 
     }
     scoreTwo(): void {
-      this.$log.log('two points');
+      this.$log.log('bang two points');
     }
   }
 
